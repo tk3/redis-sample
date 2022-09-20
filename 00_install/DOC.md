@@ -1,6 +1,6 @@
 
 
-## install
+## install redis from source
 
 ```
 curl -O https://download.redis.io/redis-stable.tar.gz
@@ -26,4 +26,14 @@ $ redis-cli -v
 redis-cli 7.0.4 (git:ac771e84)
 ```
 
+## install stone from source
+
+```
+curl -O https://www.gcd.org/sengoku/stone/stone-2.4.tar.gz
+tar zxf stone-2.4.tar.gz 
+cd stone-2.4/
+make linux
+```
+
+どこからでも使えるように、ビルドした `stone` を PATH の通った場所にコピーする。そのまま使っても構わない。
 

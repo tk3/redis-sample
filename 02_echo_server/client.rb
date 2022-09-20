@@ -2,7 +2,10 @@
 
 require "socket"
 
-s = TCPSocket.open("localhost", 12345)
+port = if ARGV.size > 0 then ARGV.shift else 6379 end
+puts "port: #{port}"
+
+s = TCPSocket.open("localhost", port)
 
 while gets
   s.write($_)

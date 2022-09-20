@@ -3,7 +3,7 @@
 require "socket"
 
 port = if ARGV.size > 0 then ARGV.shift else 6379 end
-puts "port: #{port}"
+puts "connect to localhost:#{port}"
 
 s = TCPSocket.open("localhost", port)
 

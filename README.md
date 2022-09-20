@@ -1,1 +1,2 @@
-# redis-sample
+# 実装をしながらRedisプロトコルを理解する
+

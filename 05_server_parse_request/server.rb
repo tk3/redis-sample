@@ -19,6 +19,8 @@ def parse_request(sock)
 
     response = sock.readline
     param_value = response.chomp("\r\n").slice(0, param_length)
+
+    puts "param) length: #{param_length}, value: #{param_value}"
   else
     puts "Unknown message"
   end

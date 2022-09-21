@@ -2,17 +2,17 @@
 
 require "socket"
 
-gs = TCPServer.open("localhost", 12345)
-addr = gs.addr
-addr.shift
-printf("server is on %s\n", addr.join(":"))
-
 def parse_request(sock)
 end
 
 def do_request(sock)
   parse_request(sock)
 end
+
+gs = TCPServer.open("localhost", 12345)
+addr = gs.addr
+addr.shift
+printf("server is on %s\n", addr.join(":"))
 
 while true
   Thread.start(gs.accept) do |s|
